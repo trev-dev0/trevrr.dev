@@ -11,6 +11,7 @@ export default class Document extends NextDocument {
           body,
           body > div:first-child,
           div#__next,
+          __next,
           div#__next > div {
             height: 100%;
           }

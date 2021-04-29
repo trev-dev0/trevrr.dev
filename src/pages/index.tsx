@@ -1,21 +1,16 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Text } from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
+import Layout from "../components/Layout"
 import "@fontsource/caveat";
 const Index = () => {
   return (
-    <Flex w="100%" h="100%">
-      <Flex direction="column">
-        <Text fontSize="20px" fontFamily="caveat">
-          {"<h2>"}
-        </Text>
-        <Text fontSize="20px" ml={5}>
-          {"    "}trevorr.Dev
-        </Text>
-
-        <Text fontSize="20px" fontFamily="caveat">
-          {"</h2>"}
-        </Text>
-      </Flex>
-    </Flex>
+    <Layout>
+      <Grid gridTemplateColumns="repeat(12, 1fr)">
+        <Box gridColumn="1/3">
+          <Navbar/>
+        </Box>
+      </Grid>
+    </Layout>
   );
 };
 
