@@ -1,5 +1,6 @@
 import { Button, Link, Text } from "@chakra-ui/react";
 import CaveatWrapper from "./CaveatWrapper";
+import { motion } from "framer-motion";
 
 interface PropTypes {
   text: string;
@@ -7,9 +8,12 @@ interface PropTypes {
 const NavLink = (props: PropTypes) => {
   let text = props.text;
   return (
-    <Link color="purple.200" size="xs" borderRadius="0">
-      {text}
-    </Link>
+    <motion.div
+    whileHover={{scale: 1.2}}>
+      <Link color="purple.200" size="xs" borderRadius="0">
+        {text}
+      </Link>
+    </motion.div>
   );
 };
 
