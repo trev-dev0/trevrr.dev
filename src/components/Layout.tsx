@@ -1,10 +1,23 @@
 import { Grid, Box } from "@chakra-ui/layout";
 import Head from "next/head";
 import Navbar from "./Navbar";
+import {useEffect, useReducer} from "react";
 
 const Layout = ({ children }) => {
+
+  /*
+    this code triggers a re-render on resize
+    so that the animations and positions
+    of animated elements react accordingly
+  */
+  const [_, forceUpdate] = useReducer((x) => x + 1, 0);
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      forceUpdate();
+    })
+  })
   return (
-    <Grid gridTemplateColumns="repeat(18, 1fr)" gridTemplateRows="repeat(12, 1fr)" zIndex="0" bg="gray.900">
+    <Grid gridTemplateColumns="repeat(18, 1fr)" gridTemplateRows="repeat(auto-fill, 100px)" zIndex="0" bg="gray.900" overflowY="scroll">
         <Head>
             <title>trevrr.dev</title>
         </Head>

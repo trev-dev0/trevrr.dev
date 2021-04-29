@@ -31,10 +31,10 @@ const Navbar = () => {
   return (
     <Flex
       ref={outerFlex}
-      direction="column"
+      // @ts-ignore
+      direction={linkDirection}
       h="100%"
-      justifyContent={justifyContent}
-      alignItems="center"
+      justifyContent="center"
       p={2}
       overflow="hidden"
     >
@@ -44,7 +44,7 @@ const Navbar = () => {
           <Box>
             <Logo />
           </Box>
-          <Flex direction="row">
+          <Flex direction="row" minHeight="30%">
             <Flex direction="column">
               <CaveatWrapper list={true} tag="links" direction="column">
                 {/* @ts-ignore  */}
