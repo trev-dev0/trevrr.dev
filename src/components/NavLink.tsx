@@ -8,8 +8,7 @@ interface PropTypes {
 const NavLink = (props: PropTypes) => {
   let text = props.text;
   return (
-    <motion.div
-    whileHover={{scale: 1.2}}>
+    <motion.div>
       <Link color="purple.200" size="xs" borderRadius="0">
         {text}
       </Link>
