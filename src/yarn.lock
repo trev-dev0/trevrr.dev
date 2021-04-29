@@ -720,6 +720,16 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fontsource/caveat@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/caveat/-/caveat-4.2.2.tgz#628ec9c66b20a3e54c2a7351309c7f2f4d7d5326"
+  integrity sha512-USkSrPihM5vMyWREHv6o4J+t+gcTvUKNI9x0NmEmU1hfQxBj/Ihr9/uLaN5uqoJD0L4wgS99KJHgGIwRggPiyQ==
+
+"@fontsource/comfortaa@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/comfortaa/-/comfortaa-4.2.2.tgz#2bbca36b904d1800b480b5aaaf82e34b03b44a1d"
+  integrity sha512-VsCLRzyoF79azyQ6FHx3a3X2CjgXWMzSbfFaBSOVTV9dPxvA83/c31jWOfMidoN2oRQmSMG2HhJtemTueEgH/A==
+
 "@hapi/accept@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.1.tgz#068553e867f0f63225a506ed74e899441af53e10"
