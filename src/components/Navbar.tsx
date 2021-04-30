@@ -59,6 +59,8 @@ const Navbar = (props: PropTypes) => {
       setTimeout(() => {
         setGoBackHome(false);
         setDraggable(true);
+        setXPos(0)
+        setYPos(0)
       }, 2)
       // y.set(0);
     }, 2000);
@@ -98,13 +100,13 @@ const Navbar = (props: PropTypes) => {
         animate={goBackHome ? {x: 0, y: 0}: {}}
       >
         <CaveatWrapper list={false} tag="nav" direction="column">
-          <AnimatePresence>
+          <AnimatePresence >
             {!minimized && (
               <motion.div
                 key="modal"
                 initial={{ scale: 0}}
                 animate={{scale: 1}}
-                exit={{scale: 0.1}}
+                exit={{scale: 0}}
               >
                 <NavbarItems xPos={xPos} yPos={yPos} />
               </motion.div>
