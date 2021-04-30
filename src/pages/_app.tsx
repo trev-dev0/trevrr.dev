@@ -1,7 +1,7 @@
 import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 import theme from "../theme";
 import "@fontsource/caveat";
-import "@fontsource/comfortaa";
+import "@fontsource/roboto-mono";
 
 function MyApp({ Component, pageProps }) {
   return (

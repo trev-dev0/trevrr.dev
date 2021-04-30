@@ -11,7 +11,7 @@ interface PropTypes {
 const CaveatWrapper = ({ children, tag, direction, list }: PropTypes) => {
   if (!direction || direction === "row") {
     return (
-      <Box fontFamily="consolas">
+      <Box fontFamily="monospace">
         {`${tag}: `}
         {children}
         {", "}
@@ -24,14 +24,14 @@ const CaveatWrapper = ({ children, tag, direction, list }: PropTypes) => {
           <Text fontFamily="consolas" fontSize="14px">
             {`${tag}: {`}
           </Text>
-          <Flex direction="column" fontFamily="consolas" ml="4">
+          <Flex direction="column" fontFamily="monospace" ml="4">
             [
             <Flex direction="column" ml={4}>
               {children}
             </Flex>
             ]
           </Flex>
-          <Text fontFamily="consolas" fontSize="14px">
+          <Text fontFamily="monospace" fontSize="14px">
             {"},"}
           </Text>
         </Flex>
@@ -39,11 +39,11 @@ const CaveatWrapper = ({ children, tag, direction, list }: PropTypes) => {
     } else {
       return (
         <Flex direction="column" textColor="whiteAlpha.700" alignItems="left">
-          <Text fontFamily="Consolas" fontSize="14px">
+          <Text fontFamily="monospace" fontSize="14px">
             {`${tag}: {`}
           </Text>
           <Box ml={4}>{children}</Box>
-          <Text fontFamily="Consolas" fontSize="14px">
+          <Text fontFamily="monospace" fontSize="14px">
             {"},"}
           </Text>
         </Flex>

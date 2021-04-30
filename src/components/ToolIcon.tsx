@@ -12,6 +12,7 @@ const ToolIcon = (props: PropTypes) => {
   const variants = {
     clicked: {
       scale: 2,
+      rotate: 360,
     },
     initial: {},
   };
@@ -19,7 +20,6 @@ const ToolIcon = (props: PropTypes) => {
     <motion.div
       whileHover={{
         scale: 2,
-        rotate: 360,
       }}
       animate={props.clicked ? "clicked" : "initial"}
       variants={variants}

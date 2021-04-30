@@ -1,4 +1,5 @@
 import { Flex, Text, Heading } from "@chakra-ui/layout";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "../components/Layout";
 import Tools from "../components/Tools";
@@ -15,7 +16,7 @@ const Skills = () => {
         alignItems="center"
       >
         <Flex direction="column" w="50%">
-          <Heading size="4xl" color="purple.300">
+          <Heading fontFamily="Roboto Mono" size="4xl" color="purple.300">
             Tools
           </Heading>
           <Text fontFamily="Roboto Mono" color="white">
@@ -24,9 +25,20 @@ const Skills = () => {
             are the tools I use the most.
           </Text>
           <Tools setToolText={setCurrentText} />
-          <Text fontFamily="Roboto Mono" mt={3}>
-            {currentText}
-          </Text>
+          <AnimatePresence>
+            <motion.p
+              key={currentText}
+              initial={{
+                y: 0,
+                opacity: 0,
+              }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ y: -300, opacity: 0 }}
+            >
+              <Text fontFamily="Roboto Mono" mt={3}></Text>
+              {currentText}
+            </motion.p>
+          </AnimatePresence>
         </Flex>
       </Flex>
     </Layout>

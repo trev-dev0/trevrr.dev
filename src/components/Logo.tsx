@@ -4,7 +4,7 @@ import CaveatWrapper from "./CaveatWrapper";
 const Logo = () => {
   return (
     <CaveatWrapper list={false} tag="name">
-      <Text as="span" color="purple.200">
+      <Text as="span" color="purple.200" fontFamily="monospace">
         "trevor rice"
       </Text>
     </CaveatWrapper>

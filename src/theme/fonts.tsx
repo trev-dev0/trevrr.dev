@@ -1,6 +1,6 @@
 const fonts = {
   heading: "Roboto Mono",
-  body: "comfortaa, caveat",
+  body: "Roboto Mono",
 };
 
 export default fonts;
