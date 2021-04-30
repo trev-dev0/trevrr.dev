@@ -28,7 +28,7 @@ let linkDirection = useBreakpointValue({
             <Flex direction={linkDirection} justifyContent="space-evenly">
 
               <NavLink href="/" text='"home", ' />
-              <NavLink href="/skills" text='"skills", ' />
+              <NavLink href="/tools" text='"tools", ' />
               <NavLink href="/awards" text='"awards",  ' />
               <NavLink href="/work" text='"work",  ' />
               <NavLink href="/contact" text='"contact"' />
