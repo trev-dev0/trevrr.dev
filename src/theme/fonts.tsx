@@ -1,5 +1,5 @@
 const fonts = {
-  heading: "comfortaa",
+  heading: "Roboto Mono",
   body: "comfortaa, caveat",
 };
 

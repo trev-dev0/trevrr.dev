@@ -730,6 +730,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/comfortaa/-/comfortaa-4.2.2.tgz#2bbca36b904d1800b480b5aaaf82e34b03b44a1d"
   integrity sha512-VsCLRzyoF79azyQ6FHx3a3X2CjgXWMzSbfFaBSOVTV9dPxvA83/c31jWOfMidoN2oRQmSMG2HhJtemTueEgH/A==
 
+"@fontsource/roboto-mono@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-mono/-/roboto-mono-4.2.2.tgz#deb736753e9680e94a11d6e162badf8636310942"
+  integrity sha512-qBEDhPHwN0m6VXSS1EGSAkmKT3gqfQZJyynSkSDQZNPRLeDVq7CTcmJWhjIqAFgVqJ4PNfMUIEl9+bqeBtlvhQ==
+
 "@hapi/accept@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.1.tgz#068553e867f0f63225a506ed74e899441af53e10"
