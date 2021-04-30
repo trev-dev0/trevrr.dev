@@ -50,24 +50,22 @@ const Navbar = (props: PropTypes) => {
   const [draggable, setDraggable] = useState(true);
   const resetPosition = async () => {
     if (draggable) {
-      setDraggable(!draggable)
-    await setTimeout(() => {
-      x.stop();
-      y.stop();
-      setGoBackHome(true)
-      // x.set(0);
-      setTimeout(() => {
-        setGoBackHome(false);
-        setDraggable(true);
-        setXPos(0)
-        setYPos(0)
-      }, 2)
-      // y.set(0);
-    }, 2000);
-  };
-
-
+      setDraggable(!draggable);
+      await setTimeout(() => {
+        x.stop();
+        y.stop();
+        setGoBackHome(true);
+        // x.set(0);
+        setTimeout(() => {
+          setGoBackHome(false);
+          setDraggable(true);
+          setXPos(0);
+          setYPos(0);
+        }, 2000);
+        // y.set(0);
+      }, 2000);
     }
+  };
   const closeNavbar = () => {
     setMinimized(!minimized);
   };
@@ -78,11 +76,11 @@ const Navbar = (props: PropTypes) => {
       direction={linkDirection}
       h="100%"
       p={2}
-      style = {{
+      style={{
         WebkitUserSelect: "none",
         MozUserSelect: "none",
         msUserSelect: "none",
-        userSelect: "none"
+        userSelect: "none",
       }}
     >
       {/* @ts-ignore */}
@@ -96,19 +94,19 @@ const Navbar = (props: PropTypes) => {
         onDragEnd={() => {
           resetPosition();
         }}
-        transition={{duration: 2}}
-        animate={goBackHome ? {x: 0, y: 0}: {}}
+        transition={{ duration: 2 }}
+        animate={goBackHome ? { x: 0, y: 0 } : {}}
       >
         <CaveatWrapper list={false} tag="nav" direction="column">
-          <AnimatePresence >
+          <AnimatePresence>
             {!minimized && (
               <motion.div
                 key="modal"
-                initial={{ scale: 0}}
-                animate={{scale: 1}}
-                exit={{scale: 0}}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0 }}
               >
-                <NavbarItems xPos={xPos} yPos={yPos} />
+                <NavbarItems draggable={draggable} xPos={xPos} yPos={yPos} />
               </motion.div>
             )}
           </AnimatePresence>
