@@ -16,27 +16,34 @@ const Index = () => {
         h="100%"
       >
         <Box
-          maxW="100vw"
           w={{ base: "max-content", sm: "max-content", md: "60%" }}
         >
-          <Flex direction="column" justifyContent="center" alignItems="center">
+          <Flex
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            borderRadius="0px"
+            // width="55%"
+            overflowX="hidden"
+          >
             <Box maxW="95%" margin="auto">
               <Heading size="4xl">Hello,</Heading>
 
               <Heading size="4xl">
-                <Flex direction="row" >
+                <Flex direction="row">
                   I'm{" "}
                   <motion.div
-                    transition={{
-                      // repeat: "Infinity",
-                      // duration: 0.2,
-                      // repeatDelay: 1
-                    }}
+                    transition={
+                      {
+                        // repeat: "Infinity",
+                        // duration: 0.2,
+                        // repeatDelay: 1
+                      }
+                    }
                     whileHover={{
-                      scale: 1.2
+                      scale: 1.2,
                     }}
-                    animate={{
-                    }}
+                    animate={{}}
                   >
                     <Text color="purple.300" as="span" ml={4}>
                       trevor
@@ -58,6 +65,9 @@ const Index = () => {
                   React utilizing react hooks specifically and I'm currently
                   developing with the NextJS framework.
                 </Text>
+                <Text fontFamily="Roboto Mono" mt={3}>
+                  I encourage you to use the links in the nav to discover more about me and how I can be an amazing asset for you.
+               </Text>
               </Box>
             </Box>
           </Flex>

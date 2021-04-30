@@ -149,10 +149,9 @@ const FallingShape = ({ shapeNum }) => {
   let [randomY, setRandomY] = useState(getRandom());
   let duration = 1;
   const controls = useAnimation();
-  let [opacity, setOpacity] = useState(1);
   useEffect(() => {
     controls.set({
-      opacity: 0.8,
+      opacity: 0.4,
     });
     controls.start({
       top: getRandom() + "%",
@@ -160,7 +159,6 @@ const FallingShape = ({ shapeNum }) => {
       rotate: getRandomInt(360),
     });
 
-    setOpacity((opacity + 1) % 2);
   }, []);
   const handleAnimationComplete = () => {
     controls.stop();
@@ -172,7 +170,6 @@ const FallingShape = ({ shapeNum }) => {
       rotate: getRandomInt(360),
     });
 
-    setOpacity((opacity + 1) % 2);
   };
 
   console.log(randomX);
@@ -180,7 +177,7 @@ const FallingShape = ({ shapeNum }) => {
     <motion.div
       style={{
         position: "fixed",
-        opacity: "0.2",
+        opacity: "0.1",
         zIndex: 1,
       }}
       initial={{

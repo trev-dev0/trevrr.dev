@@ -22,21 +22,21 @@ const Layout = ({ children }) => {
       direction={direction}
       w="100%"
       h="100%"
-      bg="gray.900"
+      bg="blackAlpha.600"
       alignItems={direction !== "column" ? "center": "flex-start"}
       overflowY="auto"
     >
       <Head>
         <title>trevrr.dev</title>
       </Head>
-      <Box w="fit-content" z-index="50" bg="gray.900">
+      <Box w="fit-content" z-index="50" bg="">
         <Navbar resetPosition={resetPosition} />
       </Box>
-      <Box flex="1" w="max-content" h="95%" zIndex="10">
+      <Box flex="1" w="100%" h="95%" zIndex="10">
         {children}
       </Box>
 
-      <AnimatedBackground/>
+      {/* <AnimatedBackground/> */}
     </Flex>
   );
 };
