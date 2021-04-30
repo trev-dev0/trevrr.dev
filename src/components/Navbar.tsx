@@ -1,14 +1,17 @@
-import { IconButton } from "@chakra-ui/button";
+import { IconButton, Button } from "@chakra-ui/button";
 import { Flex, Box, Text } from "@chakra-ui/layout";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 import { FaArrowsAltV } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { AnimatePresence, motion, useMotionValue } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import CaveatWrapper from "./CaveatWrapper";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
-
-const Navbar = () => {
+import NavbarItems from "./NavbarItems";
+interface PropTypes {
+  resetPosition: () => void;
+}
+const Navbar = (props: PropTypes) => {
   let outerFlex = useRef();
   let justifyContent = useBreakpointValue({
     base: "flex-start",
@@ -28,6 +31,44 @@ const Navbar = () => {
     md: "x",
     lg: "y",
   });
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  let [xPos, setXPos] = useState(0);
+
+  let [yPos, setYPos] = useState(0);
+  useEffect(() => {
+    x.onChange((latest) => {
+      setXPos(Math.round(latest));
+    });
+    y.onChange((latest) => {
+      setYPos(Math.round(latest));
+    });
+  });
+
+  let [goBackHome, setGoBackHome] = useState(false);
+  const [minimized, setMinimized] = useState(false);
+  const [draggable, setDraggable] = useState(true);
+  const resetPosition = async () => {
+    if (draggable) {
+      setDraggable(!draggable)
+    await setTimeout(() => {
+      x.stop();
+      y.stop();
+      setGoBackHome(true)
+      // x.set(0);
+      setTimeout(() => {
+        setGoBackHome(false);
+        setDraggable(true);
+      }, 2)
+      // y.set(0);
+    }, 2000);
+  };
+
+
+    }
+  const closeNavbar = () => {
+    setMinimized(!minimized);
+  };
   return (
     <Flex
       ref={outerFlex}
@@ -36,31 +77,49 @@ const Navbar = () => {
       h="100%"
       justifyContent="center"
       p={2}
-      overflow="hidden"
+      style = {{
+        WebkitUserSelect: "none",
+        MozUserSelect: "none",
+        msUserSelect: "none",
+        userSelect: "none"
+      }}
     >
       {/* @ts-ignore */}
-      <motion.div drag={dragDirection} dragConstraints={outerFlex}>
+      {/* <motion.div drag={dragDirection} dragConstraints={outerFlex}> */}
+      <motion.div
+        drag={draggable}
+        style={{
+          x: x,
+          y: y,
+        }}
+        onDragEnd={() => {
+          resetPosition();
+        }}
+        transition={{duration: 2}}
+        animate={goBackHome ? {x: 0, y: 0}: {}}
+      >
         <CaveatWrapper list={false} tag="nav" direction="column">
-          <Box>
-            <Logo />
-          </Box>
-          <Flex direction="row" minHeight="30%">
-            <Flex direction="column">
-              <CaveatWrapper list={true} tag="links" direction="column">
-                {/* @ts-ignore  */}
-                <Flex direction={linkDirection} justifyContent="space-evenly">
-                  <NavLink text='"skills", ' />
-                  <NavLink text='"awards",  ' />
-                  <NavLink text='"work",  ' />
-                  <NavLink text='"contact"' />
-                </Flex>
-              </CaveatWrapper>
-            </Flex>
-          </Flex>
-          <CaveatWrapper list={false} tag="draggable">
-            <Text as="span" color="green.300">
-              true
-            </Text>
+          <AnimatePresence>
+            {!minimized && (
+              <motion.div
+                key="modal"
+                initial={{ scale: 0}}
+                animate={{scale: 1}}
+                exit={{scale: 0.1}}
+              >
+                <NavbarItems xPos={xPos} yPos={yPos} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          {/* {minimized ? (
+            <Text as="span">...</Text>
+          ) : (
+            <NavbarItems xPos={xPos} yPos={yPos} />
+          )} */}
+          <CaveatWrapper list={false} tag="minimized">
+            <Button onClick={() => closeNavbar()} size="xs">
+              {minimized ? "true" : "false"}
+            </Button>
           </CaveatWrapper>
         </CaveatWrapper>
       </motion.div>

@@ -16,7 +16,6 @@ export default class Document extends NextDocument {
             height: 100%;
           }
           body {
-            
               height: 100%;
           }
         `}</style>

@@ -32,7 +32,7 @@ const CaveatWrapper = ({ children, tag, direction, list }: PropTypes) => {
             ]
           </Flex>
           <Text fontFamily="consolas" fontSize="14px">
-            {"}"}
+            {"},"}
           </Text>
         </Flex>
       );
@@ -44,7 +44,7 @@ const CaveatWrapper = ({ children, tag, direction, list }: PropTypes) => {
           </Text>
           <Box ml={4}>{children}</Box>
           <Text fontFamily="Consolas" fontSize="14px">
-            {"}"}
+            {"},"}
           </Text>
         </Flex>
       );
