@@ -41,6 +41,10 @@ export default class Document extends NextDocument {
           ::-webkit-scrollbar-thumb:hover {
             background: #555;
           }
+          .js-focus-visible :focus:not([data-focus-visible-added]) {
+            outline: none;
+            box-shadow: none;
+          }
         `}</style>
 
         <body>
