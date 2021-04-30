@@ -75,7 +75,6 @@ const Navbar = (props: PropTypes) => {
       // @ts-ignore
       direction={linkDirection}
       h="100%"
-      justifyContent="center"
       p={2}
       style = {{
         WebkitUserSelect: "none",

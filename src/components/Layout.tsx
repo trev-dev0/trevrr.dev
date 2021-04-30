@@ -21,11 +21,11 @@ const Layout = ({ children }) => {
 //     })
 //   })
   return (
-    <Flex direction="row" w="100%" h="100%" bg="gray.900" overflow="hidden" >
+    <Flex direction="column" w="100%" h="100%" bg="gray.900" overflow="hidden">
         <Head>
             <title>trevrr.dev</title>
         </Head>
-      <Box  z-index="50" top={position} left={position} gridColumn={{base: "1/19", sm: "1/19", md: "1/19", lg: "1/5", xl: "1/4"}} gridRow={{base: "1/5", sm: "1/4", md: "1/4", lg: "1/13"}} bg="gray.900" zIndex="50">
+      <Box  z-index="50"  bg="gray.900">
         <Navbar resetPosition={resetPosition} />
       </Box>
       <Box gridColumn="9/13" zIndex="0">
