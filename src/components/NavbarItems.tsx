@@ -26,6 +26,8 @@ let linkDirection = useBreakpointValue({
           <CaveatWrapper list={true} tag="links" direction="column">
             {/* @ts-ignore  */}
             <Flex direction={linkDirection} justifyContent="space-evenly">
+
+              <NavLink text='"home", ' />
               <NavLink text='"skills", ' />
               <NavLink text='"awards",  ' />
               <NavLink text='"work",  ' />

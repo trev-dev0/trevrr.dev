@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
       w="100%"
       h="100%"
       bg="gray.900"
+      alignItems={direction !== "column" ? "center": "flex-start"}
       overflowY="auto"
     >
       <Head>
