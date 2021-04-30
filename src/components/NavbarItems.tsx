@@ -27,11 +27,11 @@ let linkDirection = useBreakpointValue({
             {/* @ts-ignore  */}
             <Flex direction={linkDirection} justifyContent="space-evenly">
 
-              <NavLink text='"home", ' />
-              <NavLink text='"skills", ' />
-              <NavLink text='"awards",  ' />
-              <NavLink text='"work",  ' />
-              <NavLink text='"contact"' />
+              <NavLink href="/" text='"home", ' />
+              <NavLink href="/skills" text='"skills", ' />
+              <NavLink href="/awards" text='"awards",  ' />
+              <NavLink href="/work" text='"work",  ' />
+              <NavLink href="/contact" text='"contact"' />
             </Flex>
           </CaveatWrapper>
         </Flex>
