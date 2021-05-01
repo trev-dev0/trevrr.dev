@@ -19,39 +19,45 @@ const ToolIcon = (props: PropTypes) => {
   return (
     <motion.div
       whileHover={{
-        scale: 2,
+        scale: props.clicked ? 1 : 2,
       }}
-      animate={props.clicked ? "clicked" : "initial"}
-      variants={variants}
       transition={{
-        duration: 1,
+        duration: 0.2,
       }}
     >
-      <IconButton
-        outline="none"
-        boxShadow="none"
-        _active={{
-          border: "none",
+      <motion.div
+        animate={props.clicked ? "clicked" : "initial"}
+        variants={variants}
+        transition={{
+          duration: 1,
         }}
-        _focus={{
-          outline: "none",
-          boxShadow: "none",
-          background: "none",
-        }}
-        _hover={{
-          background: "none",
-        }}
-        _click={{
-          background: "none",
-        }}
-        _selection={{
-          background: "none",
-        }}
-        variant="ghost"
-        aria-label={props.label}
-        icon={props.icon}
-        color={props.color}
-      />
+      >
+        <IconButton
+          outline="none"
+          boxShadow="none"
+          _active={{
+            border: "none",
+          }}
+          _focus={{
+            outline: "none",
+            boxShadow: "none",
+            background: "none",
+          }}
+          _hover={{
+            background: "none",
+          }}
+          _click={{
+            background: "none",
+          }}
+          _selection={{
+            background: "none",
+          }}
+          variant="ghost"
+          aria-label={props.label}
+          icon={props.icon}
+          color={props.color}
+        />
+      </motion.div>
     </motion.div>
   );
 };

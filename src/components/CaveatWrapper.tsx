@@ -21,7 +21,7 @@ const CaveatWrapper = ({ children, tag, direction, list }: PropTypes) => {
     if (list) {
       return (
         <Flex direction="column" textColor="whiteAlpha.700" alignItems="left">
-          <Text fontFamily="consolas" fontSize="14px">
+          <Text fontFamily="monospace" fontSize="12px">
             {`${tag}: {`}
           </Text>
           <Flex direction="column" fontFamily="monospace" ml="4">
