@@ -1,4 +1,4 @@
-import { Flex, Text, Heading } from "@chakra-ui/layout";
+import { Flex, Text, Heading, Box } from "@chakra-ui/layout";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "../components/Layout";
@@ -15,7 +15,10 @@ const Skills = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Flex direction="column" w="50%">
+        <Flex
+          direction="column"
+          w={{ base: "90%", sm: "90%", md: "80%", lg: "50%" }}
+        >
           <Heading fontFamily="Roboto Mono" size="4xl" color="purple.300">
             Tools
           </Heading>
@@ -25,20 +28,23 @@ const Skills = () => {
             are the tools I use the most.
           </Text>
           <Tools setToolText={setCurrentText} />
-          <AnimatePresence>
-            <motion.p
-              key={currentText}
-              initial={{
-                y: 0,
-                opacity: 0,
-              }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ y: -300, opacity: 0 }}
-            >
-              <Text fontFamily="Roboto Mono" mt={3}></Text>
-              {currentText}
-            </motion.p>
-          </AnimatePresence>
+          <Box position="relative" boxSize="fit-content">
+            <Box position="relative" w="100%" h="200px">
+              <AnimatePresence>
+                <motion.p
+                  key={currentText}
+                  initial={{
+                    scale: 0.1,
+                  }}
+                  animate={{ scale: 1 }}
+                  exit={{}}
+                >
+                  <Text fontFamily="Roboto Mono" mt={3}></Text>
+                  {currentText}
+                </motion.p>
+              </AnimatePresence>
+            </Box>
+          </Box>
         </Flex>
       </Flex>
     </Layout>
