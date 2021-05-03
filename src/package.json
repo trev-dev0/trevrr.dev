@@ -14,6 +14,8 @@
     "@fontsource/caveat": "^4.2.2",
     "@fontsource/comfortaa": "^4.2.2",
     "@fontsource/roboto-mono": "^4.2.2",
+    "@formspree/react": "^2.2.3",
+    "formik": "^2.2.6",
     "framer": "^1.2.29",
     "framer-motion": "^4",
     "next": "^10.0.0",
