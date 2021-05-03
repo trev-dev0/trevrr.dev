@@ -62,7 +62,6 @@ const ContactPage = () => {
                         localStorage.getItem("contactTimeout")
                       );
                       let diff = Date.now() - lastSubmit.getMilliseconds();
-                      console.log(diff);
                       if (diff > 24 * 3600) {
                         handleSubmit(values);
                         toast({

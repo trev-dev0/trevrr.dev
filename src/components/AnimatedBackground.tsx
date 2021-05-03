@@ -172,7 +172,6 @@ const FallingShape = ({ shapeNum }) => {
 
   };
 
-  console.log(randomX);
   return (
     <motion.div
       style={{

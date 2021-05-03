@@ -3,8 +3,14 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import { useEffect, useReducer, useRef, useState } from "react";
 import { useBreakpointValue } from "@chakra-ui/media-query";
-import AnimatedBackground from "./AnimatedBackground";
+import LoadingScreen from "./LoadingScreen"
+
 const Layout = ({ children }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
   let [position, setPosition] = useState(0);
   const resetPosition = () => {
     setPosition(0);
@@ -16,7 +22,7 @@ const Layout = ({ children }) => {
     md: "column",
     lg: "row",
   });
- 
+
   return (
     <Flex
       // @ts-ignore
@@ -28,6 +34,7 @@ const Layout = ({ children }) => {
       overflowY="hidden"
       overflowX="hidden"
     >
+      {loading ? <LoadingScreen /> : null}
       <Head>
         <title>trevrr.dev</title>
       </Head>
