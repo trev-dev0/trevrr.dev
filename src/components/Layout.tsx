@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       <Box w="fit-content" z-index="50" bg="">
         <Navbar resetPosition={resetPosition} />
       </Box>
-      <Box flex="1" w="100%" h="95%" zIndex="10">
+      <Box flex="1" w="100%" h="100%" zIndex="10">
         {children}
       </Box>
 

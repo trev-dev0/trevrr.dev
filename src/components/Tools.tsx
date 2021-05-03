@@ -30,7 +30,7 @@ const Tools = ({ setToolText }) => {
   };
 
   return (
-    <Flex direction="column" w="50%" h="100%">
+    <Flex direction="column" w="50%" h="fit-content">
       <HStack direction="row" spacing={5} mt={2}>
         <Box onClick={() => handleToolClick("github")}>
           <ToolIcon
