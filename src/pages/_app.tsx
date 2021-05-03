@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
       >
         <LoadingScreen />
       </motion.div>
-      <Box h="100%" w="100%" zIndex={0} >
+      <Box h="100%" w="100%" zIndex={0} bg="gray.800" textColor="white" >
         <Component {...pageProps} />
       </Box>
     </ChakraProvider>

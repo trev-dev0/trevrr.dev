@@ -117,7 +117,7 @@ const Navbar = (props: PropTypes) => {
             <NavbarItems xPos={xPos} yPos={yPos} />
           )} */}
           <CaveatWrapper list={false} tag="minimized">
-            <Button onClick={() => closeNavbar()} size="xs">
+            <Button onClick={() => closeNavbar()} size="xs" colorScheme="purple">
               {minimized ? "true" : "false"}
             </Button>
           </CaveatWrapper>
