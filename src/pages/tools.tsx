@@ -31,7 +31,7 @@ const Skills = () => {
                 day. Below are the tools I use the most.
               </Text>
               <Tools setToolText={setCurrentText} />
-              <Box position="relative" boxSize="fit-content">
+              <Box position="relative" boxSize="fit-content" h="150px">
                 <Box position="relative" w="100%">
                   <AnimatePresence>
                     <motion.p

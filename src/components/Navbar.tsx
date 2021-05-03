@@ -82,6 +82,7 @@ const Navbar = (props: PropTypes) => {
         msUserSelect: "none",
         userSelect: "none",
       }}
+      pos="sticky"
     >
       {/* @ts-ignore */}
       {/* <motion.div drag={dragDirection} dragConstraints={outerFlex}> */}

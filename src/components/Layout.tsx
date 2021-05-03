@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
     md: "column",
     lg: "row",
   });
+ 
   return (
     <Flex
       // @ts-ignore
@@ -23,16 +24,20 @@ const Layout = ({ children }) => {
       w="100%"
       h="100%"
       bg="blackAlpha.600"
-      alignItems={direction !== "column" ? "center": "flex-start"}
-      overflowY="auto"
+      alignItems={direction !== "column" ? "center" : "flex-start"}
+      overflowY="hidden"
+      overflowX="hidden"
     >
       <Head>
         <title>trevrr.dev</title>
       </Head>
-      <Box w="fit-content" z-index="50" bg="">
+      <Box  w="fit-content" z-index="50" bg="">
         <Navbar resetPosition={resetPosition} />
       </Box>
-      <Box flex="1" w="100%" h="100%" zIndex="10">
+
+      {/* <Box w="100%" h={`calc(100% + ${navHeight}px)`} zIndex="10"> */}
+
+      <Box w="100%" h="100%" zIndex="10" overflowY="auto">
         {children}
       </Box>
 
