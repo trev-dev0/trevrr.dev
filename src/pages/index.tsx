@@ -57,13 +57,13 @@ const Index = () => {
                 <Text fontFamily="Roboto Mono" mt={1}>
                   I'm a recent graduate from Eastern Kentucky University where I
                   received my Bachelor's degree in Computer Science. I'm an
-                  aspiring web developer who loves to learn about bleeding edge
+                  aspiring web developer who loves to learn about cutting edge
                   technologies used in the web.
                 </Text>
                 <Text fontFamily="Roboto Mono" mt={3}>
                   I have experience working with all parts of the stack, but I
                   enjoy frontend development the most. I'm most experienced with
-                  React utilizing react hooks specifically and I'm currently
+                  React, utilizing react hooks specifically, and I'm currently doing
                   developing with the NextJS framework.
                 </Text>
                 <Text fontFamily="Roboto Mono" mt={3}>
