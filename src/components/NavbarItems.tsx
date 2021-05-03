@@ -47,8 +47,8 @@ const NavbarItems = (props: PropTypes) => {
             <Flex direction={linkDirection} justifyContent="space-evenly">
               <NavLink href="/" text='"home", ' />
               <NavLink href="/tools" text='"tools", ' />
-              <NavLink href="/awards" text='"edu/awards",  ' />
-              <NavLink href="/work" text='"work",  ' />
+              <NavLink href="/awards" text='"edu && awards",  ' />
+              <NavLink href="/work" text='"work && projects",  ' />
               <NavLink href="/contact" text='"contact"' />
             </Flex>
           </CaveatWrapper>
