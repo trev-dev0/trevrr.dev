@@ -51,7 +51,7 @@ const ContactPage = () => {
                   Contact Me!
                 </Heading>
                 <Text color="purple.200">
-                  Feel free to send me a message if you're interesting in
+                  Feel free to send me a message if you're interested in
                   working with me or have any questions!
                 </Text>
                 <Formik
