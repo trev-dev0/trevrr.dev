@@ -187,6 +187,7 @@ const FallingShape = ({ shapeNum }) => {
       }}
       animate={controls}
       transition={{
+        // @ts-ignore
         repeat: "mirror",
         duration: 10,
         repeatDelay: 0,

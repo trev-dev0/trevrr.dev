@@ -15,6 +15,9 @@ export default class Document extends NextDocument {
           div#__next > div {
             height: 100%;
           }
+          __next {
+            height: 100%;
+          }
           body {
             height: 100%;
           }
@@ -48,7 +51,7 @@ export default class Document extends NextDocument {
         `}</style>
 
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          <ColorModeScript initialColorMode={"dark"} />
           <Main />
           <NextScript />
         </body>
