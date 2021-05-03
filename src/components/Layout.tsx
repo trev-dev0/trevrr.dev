@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       <Head>
         <title>trevrr.dev</title>
       </Head>
-      <Box  w="fit-content" z-index="50" bg="">
+      <Box w="270px" z-index="50" bg="">
         <Navbar resetPosition={resetPosition} />
       </Box>
 

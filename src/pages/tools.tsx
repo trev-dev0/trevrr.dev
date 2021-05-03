@@ -15,7 +15,7 @@ const Skills = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Box w={{ base: "95%", sm: "80%", md: "60%",  }} h="100%">
+        <Box w={{ base: "95%", sm: "80%", md: "80%",  }} h="100%">
           <Flex
             direction="column"
             justifyContent="center"
