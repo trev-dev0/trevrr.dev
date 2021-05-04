@@ -13,12 +13,12 @@ const AwardsPage = () => {
         justifyContent="center"
         alignItems="center"
         maxHeight="none"
-        p={5}
+        // p={5}
       >
         <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
           <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
             <Flex direction="column" h="100%">
-              <Heading fontFamily="Roboto Mono" size="4xl" color="purple.500">
+              <Heading fontFamily="Roboto Mono" size="4xl" color="purple.500" >
                 Education & Awards
               </Heading>
               <Box h="100%">

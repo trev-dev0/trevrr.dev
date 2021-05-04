@@ -25,7 +25,7 @@ const Index = () => {
             borderRadius="0px"
             // width="55%"
             overflowX="hidden"
-            mt={{base: "10vh", sm: "0",md: "0", lg: "0"}}
+            mt={{base: "15vh", sm: "0",md: "0", lg: "0"}}
           >
             <Box maxW="95%" margin="auto">
               <Heading size="4xl">Hello,</Heading>

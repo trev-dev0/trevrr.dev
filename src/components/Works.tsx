@@ -82,7 +82,6 @@ const Works = () => {
       mt="5"
       spacing="25px"
       divider={<StackDivider borderColor="puprle.200" />}
-      py={10}
       overflow="hidden"
     >
       {projects.map((currentProject, i) => (
