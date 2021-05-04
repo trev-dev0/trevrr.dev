@@ -9,11 +9,11 @@ const AwardsPage = () => {
       <Flex
         direction="column"
         w="100%"
-        h="100%"
+        h="max-content"
         justifyContent="center"
         alignItems="center"
-        maxHeight="none"
-        // p={5}
+        p={5}
+        py="5%"
       >
         <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
           <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">

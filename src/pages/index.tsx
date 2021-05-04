@@ -15,6 +15,8 @@ const Index = () => {
         alignItems="center"
         my="auto"
         h="max-content"
+        // position="fixed"
+        marginTop="20%"
       >
         <Box
           w={{ base: "100%", sm: "100%", md: "80%" }}
@@ -58,8 +60,8 @@ const Index = () => {
                 <Text fontFamily="Roboto Mono" mt={1}>
                   I'm a recent graduate from Eastern Kentucky University where I
                   received my Bachelor's degree in Computer Science. I'm an
-                  aspiring web developer who loves to learn about cutting edge
-                  technologies used in the web.
+                  aspiring web developer who loves to learn about cutting-edge
+                  technologies used on the web.
                 </Text>
                 <Text fontFamily="Roboto Mono" mt={3}>
                   I have experience working with all parts of the stack, but I
@@ -68,7 +70,7 @@ const Index = () => {
                   development with the NextJS framework.
                 </Text>
                 <Text fontFamily="Roboto Mono" mt={3}>
-                  I encourage you to use the links in the nav to discover more about me and how I can be an amazing asset for you.
+                  I encourage you to use the links in the nav to discover more about me and how I can be an amazing asset to you.
                </Text>
               </Box>
             </Box>
