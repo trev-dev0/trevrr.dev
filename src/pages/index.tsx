@@ -13,10 +13,12 @@ const Index = () => {
         gridTemplateRows="auto"
         justifyContent="center"
         alignItems="center"
-        h="100%"
+        my="auto"
+        h="max-content"
       >
         <Box
           w={{ base: "100%", sm: "100%", md: "80%" }}
+
         >
           <Flex
             direction="column"
@@ -25,7 +27,6 @@ const Index = () => {
             borderRadius="0px"
             // width="55%"
             overflowX="hidden"
-            mt={{base: "15vh", sm: "0",md: "0", lg: "0"}}
           >
             <Box maxW="95%" margin="auto">
               <Heading size="4xl">Hello,</Heading>
@@ -64,7 +65,7 @@ const Index = () => {
                   I have experience working with all parts of the stack, but I
                   enjoy frontend development the most. I'm most experienced with
                   React, utilizing react hooks specifically, and I'm currently doing
-                  developing with the NextJS framework.
+                  development with the NextJS framework.
                 </Text>
                 <Text fontFamily="Roboto Mono" mt={3}>
                   I encourage you to use the links in the nav to discover more about me and how I can be an amazing asset for you.

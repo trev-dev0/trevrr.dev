@@ -3,7 +3,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import { useEffect, useReducer, useRef, useState } from "react";
 import { useBreakpointValue } from "@chakra-ui/media-query";
-import LoadingScreen from "./LoadingScreen"
+import LoadingScreen from "./LoadingScreen";
 
 const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -43,10 +43,18 @@ const Layout = ({ children }) => {
       </Box>
 
       {/* <Box w="100%" h={`calc(100% + ${navHeight}px)`} zIndex="10"> */}
-
-      <Box w="100%" h="100%" zIndex="10" overflowY="auto">
-        {children}
-      </Box>
+      <Flex direction="column" justifyContent="center">
+        <Box
+          w="100%"
+          h="100%"
+          zIndex="10"
+          overflowY="auto"
+          display="inline-block"
+          verticalAlign="middle"
+        >
+          {children}
+        </Box>
+      </Flex>
 
       {/* <AnimatedBackground/> */}
     </Flex>
