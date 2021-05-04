@@ -11,6 +11,7 @@ const WorkPage = () => {
         justifyContent="center"
         alignItems="center"
         p={5}
+      py="5%"
       >
         <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
           <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
