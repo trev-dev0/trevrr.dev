@@ -20,7 +20,7 @@ const LoadingScreen = () => {
           <Text textColor="purple.400">{`trevrr.dev${router.route}`}</Text>
           <Progress
             borderRadius="5px"
-            w="125px"
+            w="210px"
             size="md"
             colorScheme="purple"
             value={100}
