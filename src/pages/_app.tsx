@@ -8,6 +8,9 @@ import LoadingScreen from "../components/LoadingScreen";
 import { Box } from "@chakra-ui/react";
 import Router from "next/router";
 import { motion } from "framer-motion";
+import Particles from 'react-particles-js';
+import particlesConfig from "../theme/particles";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
@@ -56,6 +59,10 @@ function MyApp({ Component, pageProps }) {
           box-shadow: none;
         }
       `}</style>
+      <div style={{ position: 'absolute'}}>
+        {/* @ts-ignore */}
+        <Particles height="100vh" width="100vw" params={particlesConfig} />
+      </div>
       <motion.div
         key={router.route}
         style={{
