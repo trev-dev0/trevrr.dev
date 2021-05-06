@@ -32,11 +32,12 @@ const NavbarItems = (props: PropTypes) => {
           <Button
             aria-label="resume download"
             size="xs"
-            variant="outline"
             rightIcon={<FaDownload />}
+            variant="outline"
             colorScheme="purple"
+            color="purple.300"
           >
-            resume.pdf
+            resume.pdf (160kb)
           </Button>
         </a>
       </CaveatWrapper>
