@@ -32,7 +32,6 @@ const ContactPage = () => {
       <Flex
         direction="column"
         w="100%"
-        h="100%"
         justifyContent="center"
         alignItems="center"
         maxHeight="none"

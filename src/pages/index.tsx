@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+  Image,
+} from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import "@fontsource/roboto-mono";
@@ -18,10 +26,7 @@ const Index = () => {
         // position="fixed"
         marginTop="20%"
       >
-        <Box
-          w={{ base: "100%", sm: "100%", md: "80%" }}
-
-        >
+        <Box w={{ base: "100%", sm: "100%", md: "80%" }}>
           <Flex
             direction="column"
             justifyContent="center"
@@ -66,12 +71,13 @@ const Index = () => {
                 <Text fontFamily="Roboto Mono" mt={3}>
                   I have experience working with all parts of the stack, but I
                   enjoy frontend development the most. I'm most experienced with
-                  React, utilizing react hooks specifically, and I'm currently doing
-                  development with the NextJS framework.
+                  React, utilizing react hooks specifically, and I'm currently
+                  doing development with the NextJS framework.
                 </Text>
                 <Text fontFamily="Roboto Mono" mt={3}>
-                  I encourage you to use the links in the nav to discover more about me and how I can be an amazing asset to you.
-               </Text>
+                  I encourage you to use the links in the nav to discover more
+                  about me and how I can be an amazing asset to you.
+                </Text>
               </Box>
             </Box>
           </Flex>
