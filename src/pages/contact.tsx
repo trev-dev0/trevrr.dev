@@ -34,18 +34,18 @@ const ContactPage = () => {
         w="100%"
         justifyContent="center"
         alignItems="center"
-        maxHeight="none"
-        p={5}
+        h="max-content"
+
+        marginTop={{base: "10%", lg: "30%", xl: "18%"}}
       >
-        <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
-          <Box w={{ base: "95%", sm: "95%", md: "80%", lg: "80%" }} h="100%">
+
+        <Box w={{ base: "100%", sm: "100%", md: "100%" }} mr={{base: "0", xl: "10vw"}}>
             <Flex
               direction="column"
-              h="100%"
               alignItems="center"
               justifyContent="center"
             >
-              <Box>
+              <Box maxW="95%" margin="auto">
                 <Heading color="purple.500" size="4xl">
                   Contact Me!
                 </Heading>
@@ -167,7 +167,6 @@ const ContactPage = () => {
               </Box>
             </Flex>
           </Box>
-        </Box>
       </Flex>
     </Layout>
   );
