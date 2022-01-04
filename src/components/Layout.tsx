@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
     >
       {loading ? <LoadingScreen /> : null}
       <Head>
-        <title>trevrr.dev</title>
+        <title>trevdev.net</title>
       </Head>
       <Box w="350px" z-index="50" bg="">
         <Navbar resetPosition={resetPosition} />
